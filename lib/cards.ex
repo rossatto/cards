@@ -50,7 +50,7 @@ defmodule Cards do
   end
 
   def save(deck, filename) do
-    binary = :erlang.binary_to_term()
+    binary = :erlang.term_to_binary(deck)
     File.write(filename, binary)
   end
 
